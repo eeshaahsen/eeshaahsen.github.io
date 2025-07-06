@@ -27,12 +27,27 @@ body {
   padding-right: 2rem;
 }
 
-/* Title container rotated vertically */
-.vertical-title {
+/* .vertical-title {
   writing-mode: vertical-rl;
+  text-orientation: mixed;
   transform: rotate(180deg);
-  text-align: right;
+  font-family: 'Playfair', serif;
+  color: #000;
+} */
+
+.vertical-title {
+  position: fixed;       /* or absolute if you prefer */
+  top: 50%;              /* center vertically */
+  right: 20px;           /* distance from right edge */
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: 'Playfair', serif;
+  color: #000;
+  z-index: 10;           /* so it’s always on top */
+  user-select: none;     /* optional, prevent text highlight */
 }
+
 
 .title-block {
   display: flex;
@@ -155,3 +170,116 @@ body {
 .text-button:hover {
   background-color: #b8d0f0;
 }
+
+/* .stack-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+} */
+
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 600px;  /* or whatever width fits your panels */
+  margin: 0 auto;    /* centers horizontally */
+  padding-right: 100px; /* add some right padding so title doesn’t overlap */
+}
+
+
+/* .panel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+
+.panel-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+} */
+
+.panel-image {
+  width: 100%;    /* let image fill the container width */
+  max-width: 500px; /* increase from 300px to make images bigger */
+  height: auto;   /* keep aspect ratio */
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;   /* fill container width */
+  max-width: 600px; /* match stack container */
+  height: auto;  /* adjust height as needed */
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+}
+
+.arrow.left {
+  left: -50px; /* adjust based on spacing you want */
+}
+
+.arrow.right {
+  right: -50px;
+}
+
+.arrow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.arrow:hover img {
+  transform: scale(1.1);
+}
+
+/* .page-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+} */
+
+.page-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* push content to edges */
+  align-items: center;
+  width: 100vw;
+  max-width: 1200px; /* or whatever max width you want */
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 3rem;
+}
+
