@@ -31,7 +31,7 @@ body {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: rotate(180deg);
-  font-family: 'Playfair', serif;
+  font-family: 'Zilla Slab', serif;
   color: #000;
 } */
 
@@ -42,7 +42,7 @@ body {
   transform: translateY(-50%) rotate(180deg);
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-family: 'Playfair', serif;
+  font-family: 'Zilla Slab', serif;
   color: #000;
   z-index: 10;           /* so it’s always on top */
   user-select: none;     /* optional, prevent text highlight */
@@ -53,7 +53,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.75rem; /* this controls spacing between h1 and h4 */
+  gap: 0.75rem;
+  white-space: nowrap;   /* prevent line breaks */
+  width: auto;           /* allow width to grow as needed */
+  max-width: none;       /* remove any max-width limits */
 }
 
 .title-block h1 {
@@ -133,7 +136,7 @@ body {
   max-width: 400px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Zilla Slab', serif;
   text-align: left;
 }
 
@@ -277,7 +280,7 @@ body {
   justify-content: space-between; /* push content to edges */
   align-items: center;
   width: 100vw;
-  max-width: 1200px; /* or whatever max width you want */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   gap: 3rem;
