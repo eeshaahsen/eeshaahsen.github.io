@@ -17,14 +17,15 @@ const panels = document.querySelectorAll('.panel');
 
 
 const imageFiles = {
-  '1imagespeople': ['Anastasiia.png', 'Daisy.png', 'Eduardo.png', 'Eesha.png', 'Gosia.png', 'Jafri.png', 'Lara.png', 'Lauren.png'
-    , 'Mahalakshmi.png', 'Nadeen.png', 'Raven.png', 'Sara-Elena.png', 'Shehryaar.png', 'Sumair.png', 'Usaid.png', 'Valeria.png', 'Winona.png'],
-  '2imagesfood': ['Anastasiia.png', 'Daisy.png', 'Eduardo.png', 'Eesha.png', 'Gosia.png', 'Jafri.png', 'Lara.png', 'Lauren.png'
-    , 'Mahalakshmi.png', 'Nadeen.png', 'Raven.png', 'Sara-Elena.png', 'Shehryaar.png', 'Sumair.png', 'Usaid.png', 'Valeria.png', 'Winona.png'],
-  '3imagesclothes': ['Anastasiia.png', 'Daisy.png', 'Eduardo.png', 'Eesha.png', 'Gosia.png', 'Jafri.png', 'Lara.png', 'Lauren.png'
-    , 'Mahalakshmi.png', 'Nadeen.png', 'Raven.png', 'Sara-Elena.png', 'Shehryaar.png', 'Sumair.png', 'Usaid.png', 'Valeria.png', 'Winona.png'],
-  '4imagessetting': ['Anastasiia.png', 'Daisy.png', 'Eduardo.png', 'Eesha.png', 'Gosia.png', 'Jafri.png', 'Lara.png', 'Lauren.png'
-    , 'Mahalakshmi.png', 'Nadeen.png', 'Raven.png', 'Sara-Elena.png', 'Shehryaar.png', 'Sumair.png', 'Usaid.png', 'Valeria.png', 'Winona.png'],
+  '1imagespeople': ['Mahalakshmi.png', 'Winona.png', 'Valeria.png', 'Shehryaar.png', 'Lauren.png', 'Nadeen.png', 'Daisy.png', 'Jafri.png',
+    'Gosia.png', 'Lara.png', 'Sara-Elena.png', 'Sumair.png', 'Anastasiia.png', 'Raven.png', 'Usaid.png', 'Eduardo.png', 'Eesha.png']
+,  '2imagesfood': ['Daisy.png', 'Eduardo.png', 'Eesha.png', 'Gosia.png', 'Anastasiia.png', 'Jafri.png', 'Lara.png', 'Lauren.png'
+    , 'Mahalakshmi.png', 'Shehryaar.png', 'Sumair.png', 'Usaid.png', 'Valeria.png', 'Winona.png', 'Nadeen.png', 'Raven.png', 'Sara-Elena.png',],
+  '3imagesclothes': ['Usaid.png', 'Gosia.png', 'Eesha.png', 'Winona.png', 'Jafri.png', 'Valeria.png', 'Nadeen.png', 'Shehryaar.png',
+    'Raven.png', 'Anastasiia.png', 'Eduardo.png', 'Sumair.png', 'Lauren.png', 'Mahalakshmi.png', 'Daisy.png', 'Sara-Elena.png', 'Lara.png'],
+  '4imagessetting': ['Valeria.png', 'Usaid.png', 'Eduardo.png', 'Lara.png', 'Sumair.png', 'Lauren.png', 'Daisy.png', 'Shehryaar.png', 'Nadeen.png',
+    'Raven.png', 'Winona.png', 'Eesha.png', 'Sara-Elena.png', 'Anastasiia.png', 'Mahalakshmi.png', 'Jafri.png', 'Gosia.png'],
+
 };
 
 const indices = {
