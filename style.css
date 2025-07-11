@@ -16,16 +16,33 @@ h1, h4 {
 }
 
 
-/* Set background */
+/* 
 body {
   margin: 0;
   height: 100vh;
-  background-color: #d9eaf7; /* soft light blue */
+  background-color: #d9eaf7;
   display: flex;
-  justify-content: flex-end; /* push content to the right */
+  justify-content: flex-end;
   align-items: center;
   padding-right: 2rem;
+} */
+
+body {
+  margin: 0;
+  background-color: #d9eaf7;
+  font-family: 'Zilla Slab', serif;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+
 
 /* .vertical-title {
   writing-mode: vertical-rl;
@@ -36,27 +53,21 @@ body {
 } */
 
 .vertical-title {
-  position: fixed;       /* or absolute if you prefer */
-  top: 50%;              /* center vertically */
-  right: 20px;           /* distance from right edge */
-  transform: translateY(-50%) rotate(180deg);
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+
   font-family: 'Zilla Slab', serif;
   color: #000;
-  z-index: 10;           /* so it’s always on top */
-  user-select: none;     /* optional, prevent text highlight */
+  text-align: center;
+  width: 100%;
+  margin-top: 3.5rem; 
 }
 
 
 .title-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 0.75rem;
-  white-space: nowrap;   /* prevent line breaks */
-  width: auto;           /* allow width to grow as needed */
-  max-width: none;       /* remove any max-width limits */
+  white-space: normal;
 }
 
 .title-block h1 {
@@ -80,6 +91,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem; /* spacing between buttons */
+  z-index: 20;
 }
 
 /* Circular button styling */
@@ -187,11 +199,10 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  max-width: 600px;  /* or whatever width fits your panels */
-  margin: 0 auto;    /* centers horizontally */
-  padding-right: 100px; /* add some right padding so title doesn’t overlap */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
 }
-
 
 /* .panel {
   position: relative;
@@ -286,3 +297,22 @@ body {
   gap: 3rem;
 }
 
+@media (max-width: 768px) {
+  .button-stack {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .icon-button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-button img {
+    width: 60%;
+    height: 60%;
+  }
+}
