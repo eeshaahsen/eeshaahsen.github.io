@@ -288,6 +288,7 @@ body {
 
   .stack-container {
     gap: 0.75rem; /* reduce spacing between panels */
+    margin-top: 1.5rem;
   }
 
    .arrow.left {

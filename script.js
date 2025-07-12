@@ -100,8 +100,15 @@ function triggerConfetti() {
 }
 
 function showMatchPopup(name) {
-  // alert(`This is ${name}!`);
+  const matchPopup = document.getElementById('matchPopup');
+  const matchText = document.getElementById('matchedNameText');
+  matchText.innerHTML = `This is <strong>${name}</strong>! Keep matching and discover others!`;
+  matchPopup.classList.remove('hidden');
 }
+
+document.getElementById('closeMatchPopup').addEventListener('click', () => {
+  document.getElementById('matchPopup').classList.add('hidden');
+});
 
 function checkForMatch() {
   const currentNames = Object.keys(indices).map(category => {
