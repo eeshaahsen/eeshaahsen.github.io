@@ -124,4 +124,19 @@ function checkForMatch() {
   }
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  const instructionPopup = document.getElementById('instructionPopup');
+  const closeInstructionBtn = document.getElementById('closeInstruction');
+
+  // Show instruction popup on first load
+  instructionPopup.classList.remove('hidden');
+
+  // Hide on button click
+  closeInstructionBtn.addEventListener('click', () => {
+    instructionPopup.classList.add('hidden');
+  });
+
+  // Your existing shuffleAllPanels logic here
+  shuffleAllPanels();
+});
 
